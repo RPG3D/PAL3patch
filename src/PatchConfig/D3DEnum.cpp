@@ -6,7 +6,7 @@ static CD3DEnumeration *pD3DEnum = NULL;
 
 int CheckDX90SDKVersion()
 {
-	if (D3D_SDK_VERSION != 31) {
+	if (D3D_SDK_VERSION != 31 && D3D_SDK_VERSION != 32) {
         MessageBox(NULL, _T("wrong D3D_SDK_VERSION."), NULL, MB_ICONERROR);
 		return 0;
     }

@@ -9,10 +9,10 @@ HINSTANCE hinstDLL;
 static void self_check()
 {
     // check SDK versions
-    if (D3D_SDK_VERSION != 31) {
+    if (D3D_SDK_VERSION != 31 && D3D_SDK_VERSION != 32) {
         fail("wrong D3D_SDK_VERSION.");
     }
-    if (D3DX_SDK_VERSION != 21) {
+    if (D3DX_SDK_VERSION != 21 && D3DX_SDK_VERSION != 43) {
         fail("wrong D3DX_SDK_VERSION.");
     }
     if (!D3DXCheckVersion(D3D_SDK_VERSION, D3DX_SDK_VERSION)) {
