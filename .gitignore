@@ -1,4 +1,21 @@
-*.*
+
+
+
+
+*.obj
+.vs
+*.exp
+*.pdb
+*.ilk
+*.log
+*.idb
+*.tlog
+*.pch
+
+*_Pal3
+
+
+
 !.gitignore
 !Makefile
 !*.txt
@@ -24,3 +41,4 @@
 !*.lib
 !*.py
 !*.plugin
+
