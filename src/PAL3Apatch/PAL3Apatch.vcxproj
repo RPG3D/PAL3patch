@@ -67,22 +67,22 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(IncludePath);C:\DX90SDK\Include;C:\freetype\include</IncludePath>
-    <LibraryPath>$(LibraryPath);C:\DX90SDK\Lib;C:\freetype\objs\Win32\Debug Static</LibraryPath>
+    <IncludePath>$(IncludePath);$(DXSDK_DIR)Include;</IncludePath>
+    <LibraryPath>$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
     <OutDir>$(SolutionDir)$(Configuration)_PAL3A\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(IncludePath);C:\DX90SDK\Include;C:\freetype\include</IncludePath>
-    <LibraryPath>$(LibraryPath);C:\DX90SDK\Lib;C:\freetype\objs\Win32\Debug Static</LibraryPath>
+    <IncludePath>$(IncludePath);$(DXSDK_DIR)Include;</IncludePath>
+    <LibraryPath>$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(IncludePath);C:\DX90SDK\Include;C:\freetype\include</IncludePath>
-    <LibraryPath>$(LibraryPath);C:\DX90SDK\Lib;C:\freetype\objs\Win32\Release Static</LibraryPath>
+    <IncludePath>$(IncludePath);$(DXSDK_DIR)Include;</IncludePath>
+    <LibraryPath>$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
     <OutDir>$(SolutionDir)$(Configuration)_PAL3A\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(IncludePath);C:\DX90SDK\Include;C:\freetype\include</IncludePath>
-    <LibraryPath>$(LibraryPath);C:\DX90SDK\Lib;C:\freetype\objs\Win32\Release Static</LibraryPath>
+    <IncludePath>$(IncludePath);$(DXSDK_DIR)Include;</IncludePath>
+    <LibraryPath>$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -92,13 +92,14 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>common.h</PrecompiledHeaderFile>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
-      <AdditionalIncludeDirectories>include\PAL3Apatch</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include\PAL3Apatch;E:\VSProject\freetype-2.9.1\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>dxgi.lib;d3d9.lib;d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\VSProject\freetype-2.9.1\objs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -109,13 +110,14 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>common.h</PrecompiledHeaderFile>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
-      <AdditionalIncludeDirectories>include\PAL3Apatch</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include\PAL3Apatch;E:\VSProject\freetype-2.9.1\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>dxgi.lib;d3d9.lib;d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\VSProject\freetype-2.9.1\objs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -128,7 +130,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>common.h</PrecompiledHeaderFile>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
-      <AdditionalIncludeDirectories>E:\VSProject\UniversalDXSDK\Include;E:\VSProject\freetype-2.9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\VSProject\UniversalDXSDK\Include;E:\VSProject\freetype-2.9.1\include;%(AdditionalIncludeDirectories);E:\VSProject\freetype-2.9.1\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -136,7 +138,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>E:\VSProject\freetype-2.9.1\objs;E:\VSProject\UniversalDXSDK\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\VSProject\freetype-2.9.1\objs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -149,7 +151,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>common.h</PrecompiledHeaderFile>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
-      <AdditionalIncludeDirectories>E:\VSProject\UniversalDXSDK\Include;E:\VSProject\freetype-2.9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\VSProject\UniversalDXSDK\Include;E:\VSProject\freetype-2.9.1\include;%(AdditionalIncludeDirectories);E:\VSProject\freetype-2.9.1\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -157,7 +159,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>E:\VSProject\freetype-2.9.1\objs;E:\VSProject\UniversalDXSDK\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\VSProject\freetype-2.9.1\objs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
