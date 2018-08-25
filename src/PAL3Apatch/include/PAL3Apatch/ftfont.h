@@ -29,7 +29,13 @@ extern PATCHAPI void ftfont_draw(struct ftfont *font, const wchar_t *wstr, int l
 
 
 #if defined(_MSC_VER)
+
+#if _DEBUG
+#pragma comment(lib, "freetyped.lib")
+#else
 #pragma comment(lib, "freetype.lib")
+#endif
+
 #endif
 
 

@@ -98,7 +98,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>E:\VSProject\UniversalDXSDK\Lib\x86;E:\VSProject\freetype-2.9.1\objs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\VSProject\freetypeSDK\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>dxgi.lib;d3d9.lib;d3dx9.lib;ddraw.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
