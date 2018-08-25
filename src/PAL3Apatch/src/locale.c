@@ -12,58 +12,67 @@ static const wchar_t wstr_about_title_CHS[] = L"关于";
 static const wchar_t wstr_about_text_CHS[] = 
     L"欢迎使用《仙剑三外传·问情篇》分辨率补丁 %hs\n" 
     L"\n"
-    L"本补丁可以扩大游戏的分辨率\n"
-    L"同时修复一些游戏程序的小问题\n"
-    L"并且添加了一些实用的小功能\n" 
-    L"详细信息和使用方法请参见补丁说明文件\n"
+    L"本补丁可以扩大游戏的分辨率，\n"
+    L"并修复一些游戏程序的小问题，\n"
+    L"还添加了一些实用的小功能，\n" 
+    L"详细信息和使用方法请参见补丁说明文件。\n"
     L"\n"
     L"\n"
-    L"如果您不想每次启动时看到此信息\n"
-    L"请使用补丁配置工具，将“显示关于”设为“禁用”\n" 
+    L"如果您不想每次启动时看到此信息，\n"
+    L"请使用补丁配置工具，将“显示关于”设为“禁用”。\n" 
     L"\n"
     L"\n"
-    L"补丁网站:\n"
+    L"补丁网站：\n"
     L"  https://pal3.zbyzbyzby.com\n"
     L"\n"
-    L"编译信息:\n%hs"
+    L"编译信息：\n%hs"
 ;
 
 static const wchar_t wstr_confirmquit_text_CHS[] = L"您确定要退出游戏吗？\n未保存的游戏进度将会丢失。";
 static const wchar_t wstr_confirmquit_title_CHS[] = L"退出";
 
-static const char ftfont_filename_CHS[] = "simsun.ttc";
-static const int ftfont_index_CHS = 0;
+static const char defaultfont_ftfilename_CHS[] = "simsun.ttc";
+static const int defaultfont_ftindex_CHS = 0;
 static const DWORD defaultfont_charset_CHS = GB2312_CHARSET;
 static const int defaultfont_bold_CHS = 48;
 
 static const wchar_t wstr_defaultfont_CHS[] = L"宋体";
 static const wchar_t wstr_gameloading_CHS[] = L"游戏加载中，请稍候……";  // 少女祈祷中
 
-static const wchar_t wstr_cantsavereg_text_CHS[] = L"无法保存注册表数据到存档文件夹，部分存档数据可能会丢失。\n请确认游戏对存档文件夹有可写权限。";
+static const wchar_t wstr_cantsavereg_text_CHS[] = L"无法保存注册表存档文件，请确认游戏对存档文件有写入权限，是否重试？\n注意：若取消，前尘忆梦的解锁状态、捉鬼小游戏的关卡进度可能会丢失。";
 static const wchar_t wstr_cantsavereg_title_CHS[] = L"注册表重定向";
 
-static const wchar_t wstr_badregfile_text_CHS[] = L"注册表存档数据可能已损坏，是否继续？\n注意：若继续则部分存档数据可能会丢失。";
+static const wchar_t wstr_badregfile_text_CHS[] = L"注册表存档文件已损坏，是否继续？\n注意：若继续，前尘忆梦的解锁状态、捉鬼小游戏的关卡进度可能会丢失。";
 static const wchar_t wstr_badregfile_title_CHS[] = L"注册表重定向";
 
 static const wchar_t wstr_nocfgfile_text_CHS[] = L"无法读取补丁配置文件。请运行“补丁配置工具”来生成默认配置文件。";
 static const wchar_t wstr_nocfgfile_title_CHS[] = L"无法加载配置";
 
-static const wchar_t wstr_badcfgfile_text_CHS[] = L"补丁配置文件损坏。请运行“补丁配置工具”，使用“实用工具——恢复默认设置”功能来重写配置文件。";
+static const wchar_t wstr_badcfgfile_text_CHS[] = L"补丁配置文件已损坏。请运行“补丁配置工具”，使用“实用工具——恢复默认设置”功能来重写配置文件。";
 static const wchar_t wstr_badcfgfile_title_CHS[] = L"无法加载配置";
 
 static const wchar_t wstr_resetfailed_text_CHS[] = L"无法重置 Direct3D 设备，是否重试？\n\n按【回车】键重试；\n按【ESC】键退出游戏。";
 static const wchar_t wstr_resetfailed_title_CHS[] = L"重置失败";
 
-static const wchar_t wstr_pluginerr_notfound_text_CHS[] = L"找不到指定的插件模块“%s”。";
-static const wchar_t wstr_pluginerr_loadfailed_text_CHS[] = L"无法加载插件模块“%s”。";
-static const wchar_t wstr_pluginerr_noentry_text_CHS[] = L"无法在“%s”中找到插件模块入口点“%hs”，请确认它是否为合法的插件模块。";
-static const wchar_t wstr_pluginerr_initfailed_text_CHS[] = L"无法初始化插件模块“%s”，返回值为 %d。";
-static const wchar_t wstr_pluginerr_title_CHS[] = L"无法加载插件";
+static const wchar_t wstr_screenshot_msg_CHS[] = L"屏幕截图已保存至“%hs”";
+
+static const wchar_t wstr_punctuation_nohead_CHS[] = L"，。！？；：、～”’）》」』】";
+static const wchar_t wstr_punctuation_notail_CHS[] = L"“‘（《「『【";
+static const wchar_t wstr_punctuation_double_CHS[] = L"—…";
+
+static const wchar_t wstr_pluginerr_loadfailed_CHS[] = L"无法加载模块";
+static const wchar_t wstr_pluginerr_noentry_CHS[] = L"无入口点";
+static const wchar_t wstr_pluginerr_initfailed_CHS[] = L"初始化失败，返回值为 %d";
+static const wchar_t wstr_pluginreport_title_CHS[] = L"插件加载报告";
+static const wchar_t wstr_pluginreport_template_CHS[] = L"以下是插件加载情况：\n\n%s\n已成功加载 %d 个插件模块。";
+static const wchar_t wstr_pluginreport_namepart_CHS[] = L"%s %hs （%s）";
+static const wchar_t wstr_pluginreport_success_CHS[] = L"【成功】 %s\n";
+static const wchar_t wstr_pluginreport_failed_CHS[] = L"【失败】 %s （%s）\n";
 
 
 // CHT
-static const char ftfont_filename_CHT[] = "mingliu.ttc";
-static const int ftfont_index_CHT = 0;
+static const char defaultfont_ftfilename_CHT[] = "mingliu.ttc";
+static const int defaultfont_ftindex_CHT = 0;
 static const DWORD defaultfont_charset_CHT = CHINESEBIG5_CHARSET;
 static const int defaultfont_bold_CHT = 32;
 
@@ -80,11 +89,11 @@ const wchar_t *wstr_about_title;
 const wchar_t *wstr_about_text;
 const wchar_t *wstr_confirmquit_text;
 const wchar_t *wstr_confirmquit_title;
-const char *ftfont_filename;
-int ftfont_index;
-const wchar_t *wstr_defaultfont;
+const char *defaultfont_ftfilename;
+int defaultfont_ftindex;
 DWORD defaultfont_charset;
 int defaultfont_bold;
+const wchar_t *wstr_defaultfont;
 const wchar_t *wstr_gameloading;
 const wchar_t *wstr_cantsavereg_text;
 const wchar_t *wstr_cantsavereg_title;
@@ -96,11 +105,18 @@ const wchar_t *wstr_badcfgfile_text;
 const wchar_t *wstr_badcfgfile_title;
 const wchar_t *wstr_resetfailed_text;
 const wchar_t *wstr_resetfailed_title;
-const wchar_t *wstr_pluginerr_notfound_text;
-const wchar_t *wstr_pluginerr_loadfailed_text;
-const wchar_t *wstr_pluginerr_noentry_text;
-const wchar_t *wstr_pluginerr_initfailed_text;
-const wchar_t *wstr_pluginerr_title;
+const wchar_t *wstr_screenshot_msg;
+const wchar_t *wstr_punctuation_nohead;
+const wchar_t *wstr_punctuation_notail;
+const wchar_t *wstr_punctuation_double;
+const wchar_t *wstr_pluginerr_loadfailed;
+const wchar_t *wstr_pluginerr_noentry;
+const wchar_t *wstr_pluginerr_initfailed;
+const wchar_t *wstr_pluginreport_title;
+const wchar_t *wstr_pluginreport_template;
+const wchar_t *wstr_pluginreport_namepart;
+const wchar_t *wstr_pluginreport_success;
+const wchar_t *wstr_pluginreport_failed;
 
 
 
@@ -140,11 +156,11 @@ void init_locale()
     IMPORT_LOCALE_ITEM(CHS, wstr_about_text);
     IMPORT_LOCALE_ITEM(CHS, wstr_confirmquit_text);
     IMPORT_LOCALE_ITEM(CHS, wstr_confirmquit_title);
-    IMPORT_LOCALE_ITEM(CHS, ftfont_filename);
-    IMPORT_LOCALE_ITEM(CHS, ftfont_index);
-    IMPORT_LOCALE_ITEM(CHS, wstr_defaultfont);
+    IMPORT_LOCALE_ITEM(CHS, defaultfont_ftfilename);
+    IMPORT_LOCALE_ITEM(CHS, defaultfont_ftindex);
     IMPORT_LOCALE_ITEM(CHS, defaultfont_charset);
     IMPORT_LOCALE_ITEM(CHS, defaultfont_bold);
+    IMPORT_LOCALE_ITEM(CHS, wstr_defaultfont);
     IMPORT_LOCALE_ITEM(CHS, wstr_gameloading);
     IMPORT_LOCALE_ITEM(CHS, wstr_cantsavereg_text);
     IMPORT_LOCALE_ITEM(CHS, wstr_cantsavereg_title);
@@ -152,18 +168,25 @@ void init_locale()
     IMPORT_LOCALE_ITEM(CHS, wstr_badregfile_title);
     IMPORT_LOCALE_ITEM(CHS, wstr_resetfailed_text);
     IMPORT_LOCALE_ITEM(CHS, wstr_resetfailed_title);
-    IMPORT_LOCALE_ITEM(CHS, wstr_pluginerr_notfound_text);
-    IMPORT_LOCALE_ITEM(CHS, wstr_pluginerr_loadfailed_text);
-    IMPORT_LOCALE_ITEM(CHS, wstr_pluginerr_noentry_text);
-    IMPORT_LOCALE_ITEM(CHS, wstr_pluginerr_initfailed_text);
-    IMPORT_LOCALE_ITEM(CHS, wstr_pluginerr_title);
+    IMPORT_LOCALE_ITEM(CHS, wstr_screenshot_msg);
+    IMPORT_LOCALE_ITEM(CHS, wstr_punctuation_nohead);
+    IMPORT_LOCALE_ITEM(CHS, wstr_punctuation_notail);
+    IMPORT_LOCALE_ITEM(CHS, wstr_punctuation_double);
+    IMPORT_LOCALE_ITEM(CHS, wstr_pluginerr_loadfailed);
+    IMPORT_LOCALE_ITEM(CHS, wstr_pluginerr_noentry);
+    IMPORT_LOCALE_ITEM(CHS, wstr_pluginerr_initfailed);
+    IMPORT_LOCALE_ITEM(CHS, wstr_pluginreport_title);
+    IMPORT_LOCALE_ITEM(CHS, wstr_pluginreport_template);
+    IMPORT_LOCALE_ITEM(CHS, wstr_pluginreport_namepart);
+    IMPORT_LOCALE_ITEM(CHS, wstr_pluginreport_success);
+    IMPORT_LOCALE_ITEM(CHS, wstr_pluginreport_failed);
 
     if (target_codepage == CODEPAGE_CHT) { // CHT
-        IMPORT_LOCALE_ITEM(CHT, ftfont_filename);
-        IMPORT_LOCALE_ITEM(CHT, ftfont_index);
-        IMPORT_LOCALE_ITEM(CHT, wstr_defaultfont);
+        IMPORT_LOCALE_ITEM(CHT, defaultfont_ftfilename);
+        IMPORT_LOCALE_ITEM(CHT, defaultfont_ftindex);
         IMPORT_LOCALE_ITEM(CHT, defaultfont_charset);
         IMPORT_LOCALE_ITEM(CHT, defaultfont_bold);
+        IMPORT_LOCALE_ITEM(CHT, wstr_defaultfont);
         // FIXME
     }
 }

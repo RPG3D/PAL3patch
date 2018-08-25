@@ -22,8 +22,8 @@ ConfigDescItem ConfigDescList_CHS[] = {
 #endif
 			PATCH_VERSION _T("\r\n")
 			_T("本补丁可以扩大游戏的分辨率，\r\n")
-			_T("同时修复一些游戏程序的小问题，\r\n")
-			_T("并且添加了一些实用的小功能。"),
+			_T("并修复一些游戏程序的小问题，\r\n")
+			_T("还添加了一些实用的小功能。"),
 		_T("请选择左侧栏中的条目进行操作。"),
 	},
 	{
@@ -143,7 +143,7 @@ ConfigDescItem ConfigDescList_CHS[] = {
 		1, TRUE, TRUE,
 		_T("uireplacefont_facename"),
 		_T("字体"),
-		_T("指定游戏使用的字体。\r\n只有使用默认字体才会启用 FreeType 字体渲染方式。"),
+		_T("指定游戏使用的字体。"),
 		NULL,
 		NULL,
 		{ { NULL } },
@@ -276,7 +276,7 @@ ConfigDescItem ConfigDescList_CHS[] = {
 		2, TRUE, TRUE,
 		_T("fixsceneui_textscalefactor"),
 		_T("文字大小"),
-		_T("指定场景界面文字（如剧情文字等）的大小。"),
+		_T("指定场景界面文字（如剧情文字等）的大小。此选项会间接影响剧情对话框的大小。"),
 		NULL,
 		NULL,
 		{
@@ -342,7 +342,14 @@ ConfigDescItem ConfigDescList_CHS[] = {
 		1, TRUE, TRUE,
 		_T("regredirect"),
 		_T("注册表重定向"),
-		_T("注册表重定向功能可以将“前尘忆梦”和“小游戏”的通关状态重定向到“save/registry.txt”文件中。原始情况下，这些信息是存储在注册表中的。"),
+		_T("注册表重定向功能可以将")
+#ifdef BUILD_FOR_PAL3
+		_T("前尘忆梦、小游戏的解锁状态")
+#endif
+#ifdef BUILD_FOR_PAL3A
+		_T("前尘忆梦的解锁状态、捉鬼小游戏的关卡进度")
+#endif
+		_T("重定向到“save/registry.txt”文件中。原始情况下，这些信息是存储在注册表中的。"),
 		NULL,
 		NULL,
 		{
@@ -437,7 +444,7 @@ ConfigDescItem ConfigDescList_CHS[] = {
 		1, FALSE, TRUE,
 		NULL,
 		_T("恢复默认设置"),
-		_T("此功能可以将所有补丁配置项全部恢复为默认值。"),
+		_T("此功能可以将所有分辨率补丁配置项全部恢复为默认值。官方配置工具中的配置项不会被改变。"),
 		_T("如果您在修改配置文件或升级补丁版本后，遇到游戏启动时报错的情况，您可以尝试用此功能将补丁配置文件重置为初始状态。"),
 		CPatchConfigDlg::RestoreAllConfigToDefault,
 	},
